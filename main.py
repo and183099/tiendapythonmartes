@@ -17,7 +17,7 @@ while opcion != 5:
         print("Bienvenido a la creacion de tu lista de mercado")
         
         #creando claves y valores de un diccionario
-        producto["id"]=5
+        producto["id"]=5 
         producto["nombre"]=input("Digita el nombre del producto: ")
         producto["precio"]=int(input("Digita el precio del producto: "))
         producto["cantidad"]=int(input("Cuantos elementos de este producto vas a llevar: "))
@@ -30,9 +30,27 @@ while opcion != 5:
         productos.append(producto)
         print(productos)
         
+        #Utilizando ciclos FOR en pythonIpara recorrer LISTAS
+        for productoSeleccionado in productos:
+            print(productoSeleccionado["nombre"])
+
         
-        
-    elif opcion==2:
+    elif opcion==3:
+        #0.Preguntar a quien quiere Editar
+        productoCambio=int(input("Digita el id del producto a cambiar: "))
+        #1.Encontrar el elemento 
+        for productoBuscado in productos:
+                if productoBuscado("id")==productoCambio:
+                     print("OEE LO ENCONTRE")
+                     #PARA QUE FRENE AHI NO HAGA UN LISTA PARA ENCONTRAR EL PRODUCTO
+                else:
+                     print("NO LO ENCONTRE")
+
+        #2.Selecciono el elemento
+        #3.Accedo a las propiedades o atributos que
+        #quiero o puedo modificar
+
+
         print("estoy en la 2")
     elif opcion==3:
         print("estoy en la 3")
